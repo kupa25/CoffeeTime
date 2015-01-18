@@ -48,6 +48,7 @@ namespace CoffeeTime
         {
             if (string.IsNullOrEmpty(GetValueFromCloud("userName")))
             {
+                App.UserName = GetValueFromCloud("userName"));
                 LoginPanel.Visibility = Visibility.Visible;
                 CofeePanel.Visibility = Visibility.Collapsed;
             }
@@ -120,7 +121,7 @@ namespace CoffeeTime
                 progressRing.IsActive = false;
 
                 App.address = address;
-                App.UpdateTags();
+                CoffeeTime.CoffeeTimePush.UploadChannel(App.UpdateTags());
             }
             catch(Exception ex)
             {

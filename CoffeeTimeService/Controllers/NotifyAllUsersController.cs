@@ -35,13 +35,24 @@ namespace CoffeeTimeService.Controllers
                     "coffeetimehub");
 
                 var zipcode = string.Empty;
-
+                var message = string.Empty;
                 if ( data["zipcode"] != null)
                 {
                     zipcode = data["zipcode"].ToString();
                 }
 
-                var message = data["toast"];
+                var username = string.Empty;
+                if (data["UserName"] != null)
+                {
+                    username = data["UserName"];
+                    message = "Join "+username + " for a cup of coffee";
+                }
+                else
+                {
+                    message = "Wanna go for coffee"
+                }
+
+                
                 if (!string.IsNullOrEmpty(zipcode))
 	            {
                     message += " at " + zipcode;

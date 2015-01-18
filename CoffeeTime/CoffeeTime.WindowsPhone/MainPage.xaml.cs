@@ -65,10 +65,13 @@ namespace CoffeeTime
 
         void _geolocator_PositionChanged(Geolocator sender, PositionChangedEventArgs args)
         {
+            progressRing.IsActive = true;
+
             var lat = args.Position.Coordinate.Latitude;
             var longitude = args.Position.Coordinate.Longitude;
 
             CreateAndUpdateTags(lat, longitude);
+            progressRing.IsActive = false;
         }
 
         private async void CreateAndUpdateTags(double latitude, double longitute)
@@ -97,7 +100,7 @@ namespace CoffeeTime
             };
 
             App.address = address;
-            CoffeeTime.CoffeeTimePush.UpdateAzureTags(App.UpdateTags());
+            App.UpdateTags();
         }
 
         /// <summary>

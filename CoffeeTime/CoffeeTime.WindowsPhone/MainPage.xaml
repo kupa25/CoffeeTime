@@ -11,11 +11,12 @@
     <Grid>
         <StackPanel x:Name="LoginPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBox x:Name="TxtUserName" Margin="0" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" PlaceholderText="Name"/>
-            <Button x:Name="loginButton" Content="Thats my name yo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="loginButton_Click"/>
+            <Button x:Name="loginButton" Content="Lets Go!!" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="loginButton_Click"/>
 
         </StackPanel>
         <StackPanel x:Name="CofeePanel" Visibility="Collapsed">
             <Button x:Name="btnCoffee" Content="Coffee anyone??" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnCoffee_Click"/>
+            <ProgressRing x:Name="progressRing" HorizontalAlignment="Left" Width="0"/>
 
         </StackPanel>
     </Grid>

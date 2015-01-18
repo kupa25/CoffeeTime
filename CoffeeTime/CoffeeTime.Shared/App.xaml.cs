@@ -34,6 +34,7 @@ namespace CoffeeTime
         private TransitionCollection transitions;
 #endif
         public static Address address;
+        public static object UserName;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -168,6 +169,8 @@ namespace CoffeeTime
             {
                 tags.Add(string.Format("Country:{0}", address.Country.Replace(' ', '_')));
             }
+
+            CoffeeTime.CoffeeTimePush.UpdateAzureTags(tags);
 
             return tags;
        }
