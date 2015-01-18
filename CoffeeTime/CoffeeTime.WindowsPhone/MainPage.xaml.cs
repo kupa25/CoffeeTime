@@ -46,6 +46,7 @@ namespace CoffeeTime
         {
             if (string.IsNullOrEmpty(GetValueFromCloud("userName")))
             {
+                cloudStorage.Values.Remove("userName");
                 LoginPanel.Visibility = Visibility.Visible;
                 CofeePanel.Visibility = Visibility.Collapsed;
             }
@@ -61,17 +62,31 @@ namespace CoffeeTime
             return cloudStorage.Values.ContainsKey(p) ? (string)cloudStorage.Values[p] : string.Empty;
         }
 
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            cloudStorage.Values.Remove("userName");
+            ToggleLoginPanel();
+        }
+
         #endregion
 
         void _geolocator_PositionChanged(Geolocator sender, PositionChangedEventArgs args)
         {
-            //progressRing.IsActive = true;
+            //Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, async () =>
+            //{
+            //    progressRing.IsActive = true;
+            //});
+            
 
             var lat = args.Position.Coordinate.Latitude;
             var longitude = args.Position.Coordinate.Longitude;
 
             CreateAndUpdateTags(lat, longitude);
-            //progressRing.IsActive = false;
+
+            //Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, async () =>
+            //{
+            //    progressRing.IsActive = false;
+            //});
         }
 
         private async void CreateAndUpdateTags(double latitude, double longitute)
@@ -132,5 +147,7 @@ namespace CoffeeTime
 
             ToggleLoginPanel();
         }
+
+        
     }
 }
