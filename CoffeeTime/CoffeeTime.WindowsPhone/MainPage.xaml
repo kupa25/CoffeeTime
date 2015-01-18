@@ -16,7 +16,7 @@
         </StackPanel>
         <StackPanel x:Name="CofeePanel" Visibility="Collapsed">
             <Button x:Name="btnCoffee" Content="Coffee anyone??" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnCoffee_Click"/>
-            <ProgressRing x:Name="progressRing" HorizontalAlignment="Left" Width="0"/>
+            <ProgressRing x:Name="progressRing"/>
 
         </StackPanel>
     </Grid>

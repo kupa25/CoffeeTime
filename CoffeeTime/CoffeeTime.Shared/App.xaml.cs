@@ -145,7 +145,7 @@ namespace CoffeeTime
         {
             //check if the channel uri is null
 
-            if (address == null) return null;
+            if (address == null) return new List<string>();
 
             var tags = new List<string>();
 

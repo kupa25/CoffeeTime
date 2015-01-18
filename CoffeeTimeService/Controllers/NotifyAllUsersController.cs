@@ -42,14 +42,14 @@ namespace CoffeeTimeService.Controllers
                 }
 
                 var username = string.Empty;
-                if (data["UserName"] != null)
+                if (string.IsNullOrEmpty(data["UserName"].ToString()))
                 {
-                    username = data["UserName"];
+                    username = data["UserName"].ToString();
                     message = "Join "+username + " for a cup of coffee";
                 }
                 else
                 {
-                    message = "Wanna go for coffee"
+                    message = "Wanna go for coffee";
                 }
 
                 

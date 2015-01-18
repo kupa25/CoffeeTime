@@ -22,11 +22,11 @@ namespace CoffeeTime
             //await App.CoffeeTimeClient.GetPush().RegisterNativeAsync(channel.Uri, tags);
 
             var postalTag = tags.Find(tg => tg.Contains("Postal"));
-            var zipcode = postalTag.Substring(postalTag.IndexOf(":") + 1);
+            var zipcode = postalTag == null ? string.Empty : postalTag.Substring(postalTag.IndexOf(":") + 1);
 
             var payload = new JObject(
                         new JProperty("zipcode", zipcode),
-                        new JProperty("UserName", App.UserName);
+                        new JProperty("UserName", App.UserName));
 
             await App.CoffeeTimeClient.InvokeApiAsync("notifyAllUsers", payload);
         }

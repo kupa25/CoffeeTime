@@ -48,7 +48,7 @@ namespace CoffeeTime
         {
             if (string.IsNullOrEmpty(GetValueFromCloud("userName")))
             {
-                App.UserName = GetValueFromCloud("userName"));
+                App.UserName = GetValueFromCloud("userName");
                 LoginPanel.Visibility = Visibility.Visible;
                 CofeePanel.Visibility = Visibility.Collapsed;
             }
