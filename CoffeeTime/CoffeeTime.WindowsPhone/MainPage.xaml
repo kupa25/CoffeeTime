@@ -1,0 +1,22 @@
+﻿<Page
+    x:Class="CoffeeTime.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CoffeeTime"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel x:Name="LoginPanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="TxtUserName" Margin="0" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" PlaceholderText="Name"/>
+            <Button x:Name="loginButton" Content="Thats my name yo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="loginButton_Click"/>
+
+        </StackPanel>
+        <StackPanel x:Name="CofeePanel" Visibility="Collapsed">
+            <Button x:Name="btnCoffee" Content="Coffee anyone??" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnCoffee_Click"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
