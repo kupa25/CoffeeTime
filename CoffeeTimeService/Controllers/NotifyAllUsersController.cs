@@ -44,14 +44,13 @@ namespace CoffeeTimeService.Controllers
                 var username = string.Empty;
                 if (string.IsNullOrEmpty(data["UserName"].ToString()))
                 {
-                    username = data["UserName"].ToString();
-                    message = "Join "+username + " for a cup of coffee";
+                    message = "Wanna go for coffee";
                 }
                 else
                 {
-                    message = "Wanna go for coffee";
+                    username = data["UserName"].ToString();
+                    message = "Join " + username + " for a cup of coffee";
                 }
-
                 
                 if (!string.IsNullOrEmpty(zipcode))
 	            {
