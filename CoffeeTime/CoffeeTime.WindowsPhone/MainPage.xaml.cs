@@ -174,6 +174,14 @@ namespace CoffeeTime
             ToggleLoginPanel();
         }
 
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Frame.Navigate(typeof(About)))
+            {
+                throw new Exception("Failed to navigate");
+            }
+        }
+
         #endregion
 
         void _geolocator_PositionChanged(Geolocator sender, PositionChangedEventArgs args)

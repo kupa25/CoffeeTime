@@ -22,4 +22,9 @@
 
         </StackPanel>
     </Grid>
+    <Page.BottomAppBar>
+        <CommandBar x:Name="btnAbout">
+            <AppBarButton Label="About" Icon="Contact" Click="AppBarButton_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

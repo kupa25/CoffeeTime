@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="CoffeeTime.About"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CoffeeTime"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical" Background="#E1B87A">
+        <!--<StackPanel.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/SplashScreen.png"/>
+        </StackPanel.Background>-->
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="About" FontSize="20" VerticalAlignment="Top" Foreground="#FFE81515" FontWeight="Bold"/>
+        <TextBlock Text="This app is a first version of my idea.  By clicking on the button for Coffee Anyone, you are sending a push notification to everyone with this app in your current zipcode.  So this is a quick way of socializing and learning different programming skills at the same time" Height="119" TextWrapping="Wrap" FontSize="15" Foreground="#FF131313" Margin="0,10,0,0" />
+        <TextBlock Text="Contact Developer" FontSize="24" Tapped="TextBlock_Tapped" Foreground="#FF121BDA"></TextBlock>
+
+    </StackPanel>
+</Page>
